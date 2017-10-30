@@ -1,3 +1,5 @@
+require 'account'
+
 describe Account do
   it '#initializes a new account' do
     account = Account.new
