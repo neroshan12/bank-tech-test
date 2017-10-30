@@ -1,7 +1,10 @@
 require 'account'
 
 describe Account do
-  subject(:account) {described_class.new}
+  subject(:account) {described_class.new(transaction)}
+  let(:transaction) {double :transaction, new: transaction}
+  let(:transaction) {double :transaction}
+
   it 'initializes a new account' do
     expect(account).to be_instance_of(Account)
   end
