@@ -11,9 +11,16 @@ describe Account do
     expect(account.balance).to eq(0)
   end
 
-  it 'allows the customer to debit the account' do
+  it 'allows the debiting of an account' do
     account = Account.new
     account.debit(10)
     expect(account.balance).to eq(10)
+  end
+
+  it 'allows the crediting of an account' do
+    account = Account.new
+    account.debit(10)
+    account.credit(5)
+    expect(account.balance).to eq(5)
   end
 end
