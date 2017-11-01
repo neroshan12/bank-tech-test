@@ -16,4 +16,12 @@ class Account
   def withdraw(amount)
     @balance -= amount
   end
+
+  def balance
+    @balance
+  end
+
+  def transaction
+    @transaction
+  end
 end

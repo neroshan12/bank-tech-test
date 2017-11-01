@@ -14,4 +14,8 @@ describe Transaction do
     end
   end
 
+  it 'adds an amount to a balance' do
+    transaction.add(10)
+    expect(transaction.balance).to eq(10)
+  end
 end
