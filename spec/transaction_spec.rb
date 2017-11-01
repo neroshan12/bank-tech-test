@@ -9,7 +9,7 @@ describe Transaction do
       Timecop.freeze(Time.local(2017, 10, 30))
     end
 
-  it 'initializes with a time and date' do
+  it 'provides the current date' do
     expect(transaction.date).to eq('30/10/17')
     end
   end

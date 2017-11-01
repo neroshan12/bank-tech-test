@@ -1,10 +1,10 @@
 class Transaction
   def initialize
-    @date = Time.now
     @balance = 0
   end
 
   def date
+    @date = Time.now
     @date.strftime("%d/%m/%y")
   end
 
@@ -15,7 +15,7 @@ class Transaction
   def deduct(amount)
     @balance -= amount
   end
-  
+
   def balance
     @balance
   end
