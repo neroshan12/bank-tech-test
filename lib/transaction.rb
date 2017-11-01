@@ -1,4 +1,6 @@
 class Transaction
+  attr_reader :transaction
+
   def initialize
     @date = Time.now
   end

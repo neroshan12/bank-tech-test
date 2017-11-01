@@ -1,8 +1,7 @@
-require 'account'
+require './lib/account'
 
 describe Account do
   subject(:account) {described_class.new(transaction)}
-  let(:transaction) {double :transaction, new: transaction}
   let(:transaction) {double :transaction}
 
   it 'initializes a new account' do
@@ -13,14 +12,18 @@ describe Account do
     expect(account.balance).to eq(0)
   end
 
-  it 'allows the debiting of an account' do
-    account.debit(10)
+  # it 'initializes with a transaction' do
+  #   expect(account.transaction).to be(:transaction)
+  # end
+
+  it 'allows depositing money into an account' do
+    account.deposit(10)
     expect(account.balance).to eq(10)
   end
 
-  it 'allows the crediting of an account' do
-    account.debit(10)
-    account.credit(5)
+  it 'allows withdrawing money from an account' do
+    account.deposit(10)
+    account.withdraw(5)
     expect(account.balance).to eq(5)
   end
 end
