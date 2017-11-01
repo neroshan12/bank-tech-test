@@ -18,4 +18,9 @@ describe Transaction do
     transaction.add(10)
     expect(transaction.balance).to eq(10)
   end
+
+  it 'deducts an amount to a balance' do
+    transaction.deduct(10)
+    expect(transaction.balance).to eq(-10)
+  end
 end

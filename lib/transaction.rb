@@ -12,6 +12,10 @@ class Transaction
     @balance += amount
   end
 
+  def deduct(amount)
+    @balance -= amount
+  end
+  
   def balance
     @balance
   end
